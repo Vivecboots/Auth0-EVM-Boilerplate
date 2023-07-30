@@ -1,6 +1,6 @@
-<div align="center">
-  <h1>Auth0 and Blockchain Identity Verification Boilerplate</h1>
-</div>
+
+ Auth0 and Blockchain Identity Verification Boilerplate
+
 This project is a boilerplate for integrating Auth0 and blockchain identity verification in a React application. It uses the wagmi library for blockchain interactions and Vite for building the application. Wallet Connect is used for wallet interactions.
 
 🚀 Getting Started
