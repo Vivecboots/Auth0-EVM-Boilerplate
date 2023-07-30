@@ -37,12 +37,16 @@ const LogoutButton = () => {
 
 export function App() {
   const { isConnected } = useAccount();
+  const { isAuthenticated } = useAuth0();
 
   return (
     <>
       <h1>wagmi + RainbowKit + Vite</h1>
 
-      {isConnected && (
+      <LoginButton />
+      <LogoutButton />
+
+      {isAuthenticated && isConnected && (
         <>
           <hr />
           <h2>Network</h2>
@@ -109,24 +113,8 @@ export function App() {
           <WriteContractPrepared />
           <br />
           <hr />
-          <LoginButton />
-          <LogoutButton />
         </>
       )}
     </>
   );
 }
-
-const AppWithAuth0 = () => {
-  return (
-    <Auth0Provider
-      domain="dev-izis0xfcx8kwkhd3.us.auth0.com"
-      clientId="1kB9ySvN42L1N0pUNtP4OHnbGskosQ5D"
-      redirectUri={window.location.origin}
-    >
-      <App />
-    </Auth0Provider>
-  );
-};
-
-export default AppWithAuth0;
