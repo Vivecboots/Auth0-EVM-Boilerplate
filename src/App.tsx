@@ -1,9 +1,10 @@
+import React from 'react';
+import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
 import { useAccount } from 'wagmi'
 
 import { Account } from './components/Account'
 import { Balance } from './components/Balance'
 import { BlockNumber } from './components/BlockNumber'
-import { Connect } from './components/Connect'
 import { NetworkSwitcher } from './components/NetworkSwitcher'
 import { ReadContract } from './components/ReadContract'
 import { ReadContracts } from './components/ReadContracts'
@@ -18,14 +19,28 @@ import { WatchPendingTransactions } from './components/WatchPendingTransactions'
 import { WriteContract } from './components/WriteContract'
 import { WriteContractPrepared } from './components/WriteContractPrepared'
 
+const LoginButton = () => {
+  const { loginWithRedirect } = useAuth0();
+
+  return <button onClick={() => loginWithRedirect()}>Log In</button>;
+};
+
+const LogoutButton = () => {
+  const { logout } = useAuth0();
+
+  return (
+    <button onClick={() => logout({ returnTo: window.location.origin })}>
+      Log Out
+    </button>
+  );
+};
+
 export function App() {
   const { isConnected } = useAccount()
 
   return (
     <>
-      <h1>wagmi + Vite</h1>
-
-      <Connect />
+      <h1>wagmi + RainbowKit + Vite</h1>
 
       {isConnected && (
         <>
@@ -92,8 +107,26 @@ export function App() {
           <hr />
           <h2>Write Contract (Prepared)</h2>
           <WriteContractPrepared />
+          <br />
+          <hr />
+          <LoginButton />
+          <LogoutButton />
         </>
       )}
     </>
   )
 }
+
+const AppWithAuth0 = () => {
+  return (
+    <Auth0Provider
+      domain="your-auth0-domain"
+      clientId="your-auth0-client-id"
+      redirectUri={window.location.origin}
+    >
+      <App />
+    </Auth0Provider>
+  );
+};
+
+export default AppWithAuth0;
