@@ -14,6 +14,16 @@ Once the webpage has loaded, changes made to files inside the src/ directory (e.
 Auth0 Integration: This boilerplate provides a basic setup for integrating Auth0 in a React application for user authentication.
 Blockchain Identity Verification: It uses the wagmi library to interact with the blockchain and verify the user's identity.
 Wallet Connect: Wallet Connect is used for wallet interactions, allowing users to connect their blockchain wallets to the application.
+🤝 Contribute
+We welcome contributions to this project. To contribute:
+
+Fork this repository.
+Create a new branch on your fork. Please use the branch name format feature/your-feature-name.
+Make your changes on your new branch.
+Push your changes to your fork with git push origin your-branch-name.
+Open a pull request against the bravo branch of this repository.
+Please ensure your code adheres to our coding standards and passes all tests before opening a pull request.
+
 📚 Learn More
 To learn more about the technologies used in this boilerplate, check out the following resources:
 
