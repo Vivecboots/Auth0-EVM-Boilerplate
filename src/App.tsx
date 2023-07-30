@@ -41,7 +41,7 @@ export function App() {
 
   return (
     <>
-      <h1>wagmi + RainbowKit + Vite</h1>
+      <h1 fontFamily="monospace" >Auth-0/Crypto-auth Boilerplate</h1>
 
       <LoginButton />
       <LogoutButton />
