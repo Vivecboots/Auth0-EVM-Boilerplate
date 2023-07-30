@@ -1,5 +1,4 @@
 import { paginatedIndexesConfig, useContractInfiniteReads } from 'wagmi'
-
 import { wagmiContractConfig } from './contracts'
 import { stringify } from '../utils/stringify'
 
@@ -26,8 +25,8 @@ export function ReadContractsInfinite() {
         <>
           {data?.pages.map((data, i) => (
             <div key={i}>
-              {data.flatMap((x) => (
-                <pre key={stringify(x)}>{stringify(x)}</pre>
+              {data.flatMap((x, index) => ( // Add index here
+                <pre key={`${stringify(x)}-${index}`}>{stringify(x)}</pre> // Use index here
               ))}
             </div>
           ))}
