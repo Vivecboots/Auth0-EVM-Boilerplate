@@ -38,6 +38,8 @@ const LogoutButton = () => {
 export function App() {
   const { isConnected } = useAccount();
   const { isAuthenticated } = useAuth0();
+  console.log("isAuthenticated:", isAuthenticated);
+  console.log("isConnected:", isConnected);
 
   return (
     <>
@@ -45,12 +47,12 @@ export function App() {
 
       <LoginButton />
       <LogoutButton />
-
+      <NetworkSwitcher />
       {isAuthenticated && isConnected && (
         <>
           <hr />
           <h2>Network</h2>
-          <NetworkSwitcher />
+         
           <br />
           <hr />
           <h2>Account</h2>
