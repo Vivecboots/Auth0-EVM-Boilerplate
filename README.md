@@ -1,5 +1,5 @@
 # 🍜Auth0-EVM-Boilerplate
-This project is a developer toolkit intended for react based applications with front-end evm functionality and o-auth.  There are times when a cross between decntralization and centralized internet functionality are desireable.  One of these functionalities is authentication, where you need to create as frictionless exprience as possible.  There are positive elements to verification through blockchain such as pseudo-anonymity among most EVM chains, or full anonymity through zero-knowledge snarks or protocols such as Oasis.   Therefore, this integration attempts to provide functionality for both.  While there is full functionality in the local environment and deploys online without error, there still may be some integration issues to work around.  Please contribute, complain, post issues and please enjoy!
+This project is a developer toolkit intended for react based applications with front-end evm functionality and 0auth.  There are times when a cross between decntralization and centralized internet functionality are desireable.  One of these functionalities is authentication, where you need to create as frictionless exprience as possible.  There are positive elements to verification through blockchain such as pseudo-anonymity among most EVM chains, or full anonymity through zero-knowledge snarks or protocols such as Oasis.   Therefore, this integration attempts to provide functionality for both.  While there is full functionality in the local environment and deploys online without error, there still may be some integration issues to work around.  Please contribute, complain, post issues and please enjoy!
 
 ## 🚀Installation
 
@@ -49,6 +49,9 @@ wagmi Documentation – Learn about wagmi Hooks and API.
 WalletConnect Documentation – Learn about WalletConnect features and API.
 Vite Documentation – Learn about Vite features and API.
 
+## Author
+
+Please feel free to contact me at blairqqw@gmail.com for inquiries.  
 
 ## 📜License
 
