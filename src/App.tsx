@@ -43,7 +43,7 @@ export function App() {
 
   return (
     <>
-      <h1>Auth-0/Crypto-auth Boilerplate</h1>
+      <h1>Auth-0xox/Crypto-auth Boilerplate</h1>
 
       <LoginButton />
       <LogoutButton />
