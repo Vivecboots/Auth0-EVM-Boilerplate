@@ -7,10 +7,13 @@ import { App } from './App';
 import { config } from './wagmi';
 
 const auth0ProviderOptions = {
-  domain: "dev-7pwynludy5drchke.us.auth0.com",
-  clientId: "68OKaxXDFJBAjZEmQJO0hTNmisByuAEw",
-  redirectUri: window.location.origin,
+  domain: "dev-izis0xfcx8kwkhd3.us.auth0.com",
+  clientId: "1kB9ySvN42L1N0pUNtP4OHnbGskosQ5D",
+  authorizationParams: {
+    redirect_uri: window.location.origin,
+  },
 };
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   React.createElement(
